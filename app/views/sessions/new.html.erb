@@ -1,5 +1,14 @@
 <h1>Login</h1>
 <%= form_tag '/login' do %>
+  <%= label_tag "First name" %>
+  <%= text_field_tag :firstname %>
+  <br>
+  <%= label_tag "Last name" %>
+  <%= text_field_tag :lastname %>
+  <br>
+  <%= label_tag "User name" %>
+  <%= text_field_tag :username %>
+  <br>
   <%= label_tag :email %>
   <%= email_field_tag :email %>
   <br>
