@@ -16,8 +16,8 @@ class UsersController < ApplicationController
     redirect_to '/'
   end
 
-  def edit
-
+  def show
+    @user = User.find(params[:id])
   end
 
   def update
@@ -31,12 +31,5 @@ class UsersController < ApplicationController
     user.save!
     redirect_to '/'
   end
-
-  def show
-    @user = User.find(params[:id])
-  end
-
-  def showall
-    @users = User.all
-  end
+  
 end

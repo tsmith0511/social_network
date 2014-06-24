@@ -1,0 +1,14 @@
+<h1>Your Profile</h1>
+
+<%= form_for User.find(params[:id]), url: '/users/update' do |f| %>
+  <%= f.label :First_name %>
+  <%= f.text_field :firstname %>
+  <%= f.label :Last_name %>
+  <%= f.text_field :lastname %>
+  <br />
+  <%= f.label :Age %>
+  <%= f.text_field :age %>
+  <%= f.label :Gender %>
+  <%= f.text_field :gender %>
+  <%= f.submit "Save" %>
+<% end %>

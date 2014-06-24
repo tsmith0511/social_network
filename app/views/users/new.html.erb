@@ -1,12 +1,12 @@
 <h1>Signup</h1>
 
 <%= form_for User.new, url: '/signup' do |f| %>
-  <%= f.label "First name" %>
+  <%= f.label :First_name %>
   <%= f.text_field :firstname %>
-  <%= f.label "Last name" %>
+  <%= f.label :Last_name %>
   <%= f.text_field :lastname %>
   <br>
-  <%= f.label "User Name" %>
+  <%= f.label :Username %>
   <%= f.text_field :username %>
   <br>
   <%= f.label :email %>

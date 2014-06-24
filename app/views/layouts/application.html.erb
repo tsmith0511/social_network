@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Social Network</title>
+  <title>SocialNetworkNew</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div><%= flash[:notice] %></div>
-
 <%= yield %>
 
-<div>Number of pageviews: <%= @pageviews %></div>
 </body>
 </html>
