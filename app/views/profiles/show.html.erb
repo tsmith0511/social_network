@@ -1,0 +1,8 @@
+<h1>Profile</h1>
+<%= @profile.firstname %>
+<%= @profile.lastname %><br>
+<%= @profile.age %><br>
+<%= @profile.gender %><br>
+<a href="/users/<%= @current_user[:id] %>/edit">Edit profile</a><br>
+
+<a href="/">Back</a>

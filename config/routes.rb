@@ -8,8 +8,10 @@ root 'home#index'
   get  '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get  '/logout' => 'sessions#destroy'
-  get  '/profile' => 'profile#new'
-  get  '/profile' => 'profile#create'
+  get  '/profile' => 'profiles#new'
+  post  '/profile' => 'profiles#create'
+  get  '/profile/:id' => 'profiles#show'
+  get '/all' => 'profiles#showall'
 
 resources :users
 

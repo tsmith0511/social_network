@@ -1,6 +1,6 @@
 <h1>Your Profile</h1>
 
-<%= form_for User.find(params[:id]), url: '/users/update' do |f| %>
+<%= form_for Profile.new, url: '/profile' do |f| %>
   <%= f.label :First_name %>
   <%= f.text_field :firstname %>
   <%= f.label :Last_name %>

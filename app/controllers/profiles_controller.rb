@@ -4,24 +4,32 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    user = User.new
-    user.firstname = params[:user][:firstname]
-    user.lastname = params[:user][:lastname]
-    user.email = params[:user][:age]
-    user.password = params[:user][:gender]
-    user.save!
-    session[:user_id] = user.id.to_s
-    redirect_to '/'
+    @profile = Profile.new
+    @profile.firstname = params[:profile][:firstname]
+    @profile.lastname = params[:profile][:lastname]
+    @profile.age = params[:profile][:age]
+    @profile.gender = params[:profile][:gender]
+    @profile.user = @current_user
+    @profile.save!
+    redirect_to "/profile/#{@profile.id}"
   end
 
   def update
-    user = User.find(params[:id])
-    user.firstname = params[:user][:firstname]
-    user.lastname = params[:user][:lastname]
-    user.email = params[:user][:age]
-    user.password = params[:user][:gender]
-    user.save!
+    profile = Profile.find(params[:id])
+    profile.firstname = params[:profile][:firstname]
+    profile.lastname = params[:profile][:lastname]
+    profile.age = params[:profile][:age]
+    profile.gender = params[:profile][:gender]
+    profile.save!
     redirect_to '/'
+  end
+
+  def show
+    @profile = Profile.find(params[:id])
+  end
+
+  def showall
+    @profile = Profile.all
   end
   
 end
