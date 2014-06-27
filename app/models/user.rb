@@ -7,6 +7,7 @@ class User
   field :username, type: String
   field :email, type: String
   field :password_digest, type: String
+  field :friends, type: Array
 
   validates :email, presence: true, uniqueness: true
 

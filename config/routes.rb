@@ -12,6 +12,9 @@ root 'home#index'
   post  '/profile' => 'profiles#create'
   get  '/profile/:id' => 'profiles#show'
   get '/all' => 'profiles#showall'
+  get '/profile/:id/edit' => 'profiles#edit'
+  post '/profile/:id/edit' => 'profiles#update'
+  get '/add/:id' => 'users#add_friend'
 
 resources :users
 

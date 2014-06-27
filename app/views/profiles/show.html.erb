@@ -3,6 +3,7 @@
 <%= @profile.lastname %><br>
 <%= @profile.age %><br>
 <%= @profile.gender %><br>
-<a href="/users/<%= @current_user[:id] %>/edit">Edit profile</a><br>
+<img src ="<%=@profile.image%>" width="400px"><br>
+<a href="/users/<%= @current_user.profile.id %>/edit">Edit profile</a><br>
 
 <a href="/">Back</a>

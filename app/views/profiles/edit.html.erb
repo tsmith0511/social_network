@@ -1,6 +1,6 @@
-<h1>Your Profile</h1>
+<h1>Edit</h1>
 
-<%= form_for Profile.new, url: '/profile' do |f| %>
+<%= form_for Profile.find(params[:id]), url: '/profile' do |f| %>
   <%= f.label :First_name %>
   <%= f.text_field :firstname %>
   <%= f.label :Last_name %>
@@ -10,7 +10,5 @@
   <%= f.text_field :age %>
   <%= f.label :Gender %>
   <%= f.text_field :gender %>
-  <br>
-  <%= f.file_field :image %>
   <%= f.submit "Save" %>
 <% end %>

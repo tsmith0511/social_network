@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 #any time the page loads, it calls these methods
-  before_filter :increment_pageviews
   before_filter :get_current_user
 
   private
@@ -13,13 +12,5 @@ class ApplicationController < ActionController::Base
     if session[:user_id]
       @current_user = User.find(session[:user_id])
     end
-  end
-
-  def increment_pageviews
-    if session[:pageviews] == nil
-      session[:pageviews] = 0
-    end
-    session[:pageviews] = session[:pageviews] + 1
-    @pageviews = session[:pageviews]
   end
 end

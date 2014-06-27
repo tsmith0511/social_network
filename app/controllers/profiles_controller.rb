@@ -9,6 +9,7 @@ class ProfilesController < ApplicationController
     @profile.lastname = params[:profile][:lastname]
     @profile.age = params[:profile][:age]
     @profile.gender = params[:profile][:gender]
+    @profile.image = params[:profile][:image]
     @profile.user = @current_user
     @profile.save!
     redirect_to "/profile/#{@profile.id}"
@@ -30,6 +31,10 @@ class ProfilesController < ApplicationController
 
   def showall
     @profile = Profile.all
+  end
+
+  def edit
+
   end
   
 end

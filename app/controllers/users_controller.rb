@@ -29,5 +29,10 @@ class UsersController < ApplicationController
     user.save!
     redirect_to '/'
   end
+
+  def add_friend
+    @current_user.push(friends: params[:id])
+    redirect_to "/profile/#{@current_user.id}"
+  end
   
 end

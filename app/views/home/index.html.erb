@@ -7,7 +7,8 @@
     <a href="/logout">Logout</a><br>
 
   <a href="/profile/<%= @current_user.profile.id %>">View profile</a><br>
-	<a href="/all">View Other's Profiles</a>
+	<a href="/all">View Other's Profiles</a><br>
+  <a href="/add/<%= @current_user.profile.id%>">Friend Me</a>
   </div>
 
 <% else %>
